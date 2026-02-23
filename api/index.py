@@ -25,6 +25,8 @@ from typing import List, Dict, Any, Optional
 import tempfile
 import os
 import logging
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.ingestion import load_and_chunk
 from src.vector_store import ingest_resume, get_vector_store, delete_namespace
